@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — Forge &amp; Quêtes</title>
+  <style>
+    :root {
+      --bg: #141414;
+      --surface: #1e1e1e;
+      --orange: #ff8c42;
+      --purple: #a060ff;
+      --parchment: #c4b49a;
+      --text: #e0d8cc;
+      --muted: #888;
+      --border: #2e2e2e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    header .subtitle {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--purple);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .toc h2 {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin: 4px 0;
+    }
+
+    .toc a {
+      color: var(--parchment);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover { color: #fff; }
+
+    section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--parchment);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .badge-ios { background: #1c3a5e; color: #60b0ff; }
+    .badge-android { background: #1a3a1a; color: #60e060; }
+    .badge-both { background: #2a2a1a; color: var(--orange); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: #222;
+      color: var(--parchment);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #191919; }
+
+    .highlight {
+      background: #1a1a2e;
+      border-left: 3px solid var(--purple);
+      border-radius: 4px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--parchment);
+    }
+
+    .highlight strong { color: #fff; }
+
+    a { color: var(--orange); }
+    a:hover { color: #ffad72; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Forge &amp; Quêtes</div>
+  <h1>Politique de confidentialité</h1>
+  <div class="subtitle">Dernière mise à jour : 1er juin 2026 &nbsp;·&nbsp; Version 1.0</div>
+</header>
+
+<main>
+
+  <div class="toc">
+    <h2>Sommaire</h2>
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#donnees">Données collectées</a></li>
+      <li><a href="#finalites">Finalités du traitement</a></li>
+      <li><a href="#stockage">Stockage et sécurité</a></li>
+      <li><a href="#partage">Partage des données</a></li>
+      <li><a href="#tiers">Services tiers</a></li>
+      <li><a href="#mineurs">Mineurs</a></li>
+      <li><a href="#droits">Vos droits (RGPD)</a></li>
+      <li><a href="#retention">Durée de conservation</a></li>
+      <li><a href="#modifications">Modifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. INTRODUCTION -->
+  <section id="intro">
+    <h2>1. Introduction</h2>
+    <p>
+      Forge &amp; Quêtes (ci-après « l'Application ») est une application mobile de développement personnel à mécaniques RPG, disponible sur iOS et Android. Elle est développée et exploitée à titre individuel par Vincent Tardif (ci-après « nous » ou « le développeur »).
+    </p>
+    <p>
+      La présente politique de confidentialité décrit de manière transparente et exhaustive quelles données sont collectées, pour quelles raisons, comment elles sont protégées et quels droits vous disposez à leur égard, conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et aux exigences d'Apple (App Store Review Guidelines §5.1).
+    </p>
+    <div class="highlight">
+      <strong>Résumé en une phrase :</strong> Forge &amp; Quêtes collecte uniquement les données nécessaires à son fonctionnement, ne les vend jamais à des tiers, et vous permet de les supprimer à tout moment.
+    </div>
+  </section>
+
+  <!-- 2. DONNÉES COLLECTÉES -->
+  <section id="donnees">
+    <h2>2. Données collectées</h2>
+
+    <h3>2.1 Données que vous créez directement</h3>
+    <p>Ces données sont générées par votre utilisation de l'Application et stockées localement sur votre appareil ainsi que, de manière synchronisée, sur nos serveurs :</p>
+    <ul>
+      <li><strong>Profil de joueur</strong> : nom d'affichage, titre choisi, statistiques de jeu (Force, Intelligence, Sagesse, Persévérance, Endurance, Dextérité), niveau, points d'expérience, pièces, streak.</li>
+      <li><strong>Quêtes et habitudes</strong> : quêtes journalières, quêtes d'âme, quêtes spéciales, habitudes personnalisées, pactes quotidiens.</li>
+      <li><strong>Journal</strong> : entrées texte que vous rédigez librement, émotions associées, runes optionnelles. <em>Note : le journal n'est pas synchronisé sur nos serveurs, il reste uniquement sur votre appareil.</em></li>
+      <li><strong>Bibliothèque</strong> : titres de livres que vous importez ou renseignez.</li>
+      <li><strong>Méditation</strong> : historique de vos séances (date, durée, type de pratique), pas de contenu audio personnel.</li>
+      <li><strong>Musculation et courses</strong> : données de séances d'entraînement que vous enregistrez manuellement ou importez.</li>
+    </ul>
+
+    <h3>2.2 Données de localisation GPS</h3>
+    <p><span class="badge badge-both">iOS &amp; Android</span> Lors d'une sortie de course tracée dans l'Application, nous accédons à votre position GPS via le service de localisation de votre appareil. Ces données permettent de calculer la distance, la durée et la vitesse de votre course.</p>
+    <ul>
+      <li>La localisation est active <strong>uniquement pendant une session de course explicitement démarrée par vous</strong>.</li>
+      <li>Sur iOS, l'accès en arrière-plan (<em>Always</em>) est demandé uniquement pour continuer le suivi lorsque l'écran est verrouillé.</li>
+      <li>Les coordonnées GPS brutes ne sont <strong>pas transmises</strong> à nos serveurs — seuls les résultats calculés (distance, durée, calories estimées) sont enregistrés dans votre profil.</li>
+    </ul>
+
+    <h3>2.3 Données de santé et d'activité (HealthKit)</h3>
+    <p><span class="badge badge-ios">iOS uniquement</span> Avec votre autorisation explicite, l'Application peut lire les données suivantes depuis l'app Santé d'Apple :</p>
+    <ul>
+      <li>Courses à pied, marche, randonnée (distance, durée, calories)</li>
+      <li>Séances d'entraînement (musculation, HIIT, yoga, etc.)</li>
+    </ul>
+    <p>Ces données sont importées dans votre profil de joueur pour alimenter vos statistiques. Elles ne sont <strong>pas partagées avec des tiers</strong>. L'accès en écriture dans Santé est limité à l'enregistrement de vos séances d'entraînement de musculation si vous choisissez de l'activer.</p>
+    <p>Vous pouvez révoquer ces autorisations à tout moment dans <em>Réglages → Confidentialité &amp; Sécurité → Santé → Forge &amp; Quêtes</em>.</p>
+
+    <h3>2.4 Identifiant anonyme (Firebase)</h3>
+    <p>L'Application crée automatiquement un compte anonyme via Firebase Authentication. Cet identifiant ne contient <strong>aucune information personnelle identifiable</strong> (ni nom, ni e-mail, ni numéro de téléphone). Il sert uniquement à associer vos données de progression à un compte cloud pour la sauvegarde et la synchronisation.</p>
+    <p>Si vous choisissez de lier votre compte à une adresse e-mail (dans les Réglages), celle-ci est stockée par Firebase pour permettre la récupération de compte. Aucun mot de passe n'est visible pour nous.</p>
+
+    <h3>2.5 Code ami et fonctions sociales</h3>
+    <p>L'Application génère un code ami unique (chaîne alphanumérique aléatoire) associé à votre identifiant anonyme. Ce code peut être partagé avec d'autres utilisateurs pour créer des liens d'amitié ou rejoindre une guilde. Les données partagées dans ce cadre sont limitées à : nom d'affichage, titre actif, statistiques visibles selon vos préférences de confidentialité.</p>
+
+    <h3>2.6 Intégration Strava (optionnelle)</h3>
+    <p>Si vous connectez votre compte Strava, l'Application accède via OAuth 2.0 à votre historique de courses Strava. Un jeton d'accès et de rafraîchissement est stocké localement sur votre appareil et synchronisé dans votre profil chiffré. Vous pouvez déconnecter Strava à tout moment depuis l'Application.</p>
+
+    <h3>2.7 Données techniques (collectées automatiquement)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Donnée</th>
+          <th>Finalité</th>
+          <th>Stockage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Identifiant appareil anonyme (Firebase)</td>
+          <td>Sauvegarde cloud</td>
+          <td>Serveurs Firebase (Google)</td>
+        </tr>
+        <tr>
+          <td>Journaux d'erreurs audio</td>
+          <td>Détection de bugs techniques</td>
+          <td>Local + Firebase (anonymisé)</td>
+        </tr>
+        <tr>
+          <td>Tokens Strava (chiffrés)</td>
+          <td>Import courses Strava</td>
+          <td>Local + Firestore chiffré</td>
+        </tr>
+        <tr>
+          <td>Préférences de l'app</td>
+          <td>Paramètres utilisateur</td>
+          <td>Local (AsyncStorage)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>2.8 Données non collectées</h3>
+    <p>L'Application <strong>ne collecte pas</strong> :</p>
+    <ul>
+      <li>Nom réel, adresse postale, numéro de téléphone (sauf e-mail optionnel pour liaison de compte)</li>
+      <li>Données financières ou de paiement (les achats in-app passent par Apple App Store)</li>
+      <li>Photos, contacts, calendrier, microphone</li>
+      <li>Données biométriques (fréquence cardiaque, etc.) — même si disponibles dans HealthKit, elles ne sont pas lues</li>
+      <li>Historique de navigation web</li>
+      <li>Publicités, cookies de tracking tiers</li>
+    </ul>
+  </section>
+
+  <!-- 3. FINALITÉS -->
+  <section id="finalites">
+    <h2>3. Finalités du traitement</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Finalité</th>
+          <th>Base légale (RGPD)</th>
+          <th>Données concernées</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fournir les fonctionnalités de l'Application (progression RPG, quêtes, habitudes)</td>
+          <td>Exécution du contrat</td>
+          <td>Profil joueur, quêtes, habitudes</td>
+        </tr>
+        <tr>
+          <td>Sauvegarde et synchronisation cloud</td>
+          <td>Exécution du contrat</td>
+          <td>Profil joueur (hors journal)</td>
+        </tr>
+        <tr>
+          <td>Suivi de course GPS</td>
+          <td>Consentement explicite</td>
+          <td>Localisation GPS pendant la session</td>
+        </tr>
+        <tr>
+          <td>Import de données de santé (HealthKit)</td>
+          <td>Consentement explicite</td>
+          <td>Courses, séances (Apple Santé)</td>
+        </tr>
+        <tr>
+          <td>Import de courses Strava</td>
+          <td>Consentement explicite</td>
+          <td>Historique Strava, tokens OAuth</td>
+        </tr>
+        <tr>
+          <td>Fonctions sociales (amis, guilde)</td>
+          <td>Consentement (activation volontaire)</td>
+          <td>Code ami, nom, titre, stats visibles</td>
+        </tr>
+        <tr>
+          <td>Notifications locales (rappels, streak)</td>
+          <td>Consentement (autorisation système)</td>
+          <td>Aucune donnée transmise à l'extérieur</td>
+        </tr>
+        <tr>
+          <td>Détection et correction de bugs</td>
+          <td>Intérêt légitime</td>
+          <td>Journaux d'erreurs anonymisés</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 4. STOCKAGE ET SÉCURITÉ -->
+  <section id="stockage">
+    <h2>4. Stockage et sécurité</h2>
+
+    <h3>4.1 Stockage local</h3>
+    <p>La majorité de vos données (profil joueur, journal, préférences) est d'abord stockée localement sur votre appareil via le mécanisme AsyncStorage. Ces données sont protégées par les mécanismes de sécurité propres à iOS (sandboxing, chiffrement du stockage activé par le système) et Android.</p>
+
+    <h3>4.2 Stockage cloud (Firebase / Firestore)</h3>
+    <p>Votre profil de joueur (hors journal) est synchronisé sur Firebase Firestore (Google Cloud). Les données sont transmises via HTTPS (TLS 1.2+) et stockées dans des infrastructures Google conformes aux certifications ISO 27001, SOC 2 et SOC 3. Firebase est un service de Google LLC, soumis au DPA de Google Cloud et au Privacy Shield lorsqu'applicable.</p>
+    <p>Votre journal n'est <strong>jamais</strong> synchronisé sur le cloud — il reste exclusivement sur votre appareil.</p>
+
+    <h3>4.3 Mesures de sécurité</h3>
+    <ul>
+      <li>Authentification anonyme sans données personnelles identifiables</li>
+      <li>Règles Firestore : chaque utilisateur n'accède qu'à ses propres données</li>
+      <li>Tokens Strava stockés dans Firestore sous votre UID, non accessibles à d'autres utilisateurs</li>
+      <li>Aucune clé API ou secret n'est exposé côté client</li>
+      <li>Taille des documents Firestore limitée (protection contre les fuites de données volumineuses)</li>
+    </ul>
+  </section>
+
+  <!-- 5. PARTAGE -->
+  <section id="partage">
+    <h2>5. Partage des données</h2>
+    <div class="highlight">
+      <strong>Nous ne vendons, ne louons et ne commercialisons jamais vos données personnelles à des tiers, quels qu'ils soient.</strong>
+    </div>
+    <p>Les seules situations où des données peuvent être partagées :</p>
+    <ul>
+      <li><strong>Avec d'autres utilisateurs (fonctions sociales)</strong> : uniquement les données que vous choisissez de partager (nom, titre, statistiques selon votre niveau de confidentialité paramétré), et uniquement si vous activez les fonctions sociales.</li>
+      <li><strong>Avec Google / Firebase</strong> : en tant que sous-traitant technique pour la sauvegarde cloud. Google ne peut pas utiliser ces données à des fins publicitaires dans ce cadre.</li>
+      <li><strong>Avec Apple</strong> : les données de santé restent sous le contrôle d'Apple HealthKit. Nous ne les réexportons pas vers des tiers.</li>
+      <li><strong>Avec Strava</strong> : uniquement dans le sens Strava → Application (import de vos propres courses). Nous ne publions rien sur Strava en votre nom.</li>
+      <li><strong>Obligation légale</strong> : si la loi applicable nous y contraint (requête judiciaire, injonction), nous vous en informerons dans les limites de ce que la loi autorise.</li>
+    </ul>
+  </section>
+
+  <!-- 6. SERVICES TIERS -->
+  <section id="tiers">
+    <h2>6. Services tiers intégrés</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Fournisseur</th>
+          <th>Usage</th>
+          <th>Politique</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Firebase Authentication</td>
+          <td>Google LLC</td>
+          <td>Compte anonyme</td>
+          <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Cloud Firestore</td>
+          <td>Google LLC</td>
+          <td>Sauvegarde cloud</td>
+          <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Apple HealthKit</td>
+          <td>Apple Inc.</td>
+          <td>Import courses &amp; séances</td>
+          <td><a href="https://www.apple.com/fr/privacy/" target="_blank" rel="noopener">apple.com/fr/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Strava API</td>
+          <td>Strava Inc.</td>
+          <td>Import courses (optionnel)</td>
+          <td><a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">strava.com/legal/privacy</a></td>
+        </tr>
+        <tr>
+          <td>expo-location</td>
+          <td>Expo (open source)</td>
+          <td>GPS course en temps réel</td>
+          <td>Données traitées localement</td>
+        </tr>
+        <tr>
+          <td>expo-speech / AVSpeechSynthesizer</td>
+          <td>Apple / Expo</td>
+          <td>TTS méditation guidée</td>
+          <td>Synthèse locale, aucune donnée envoyée</td>
+        </tr>
+        <tr>
+          <td>Apple App Store (achats in-app)</td>
+          <td>Apple Inc.</td>
+          <td>Achats (si activés)</td>
+          <td><a href="https://www.apple.com/fr/privacy/" target="_blank" rel="noopener">apple.com/fr/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Aucune SDK publicitaire, de tracking ou d'analytics comportementaux n'est intégrée dans l'Application.</p>
+  </section>
+
+  <!-- 7. MINEURS -->
+  <section id="mineurs">
+    <h2>7. Mineurs</h2>
+    <p>Forge &amp; Quêtes n'est pas destinée aux enfants de moins de 13 ans (ou 16 ans dans l'Union Européenne conformément au RGPD). Nous ne collectons pas sciemment de données personnelles provenant d'enfants. Si vous estimez qu'un enfant nous a fourni des données sans consentement parental, contactez-nous à l'adresse ci-dessous pour procéder à leur suppression immédiate.</p>
+  </section>
+
+  <!-- 8. DROITS RGPD -->
+  <section id="droits">
+    <h2>8. Vos droits (RGPD)</h2>
+    <p>Si vous résidez dans l'Espace Économique Européen (EEE) ou en Suisse, vous disposez des droits suivants concernant vos données personnelles :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> : obtenir une copie des données que nous détenons sur vous.</li>
+      <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes.</li>
+      <li><strong>Droit à l'effacement</strong> (« droit à l'oubli ») : demander la suppression de vos données. Dans l'Application : <em>Réglages → Compte → Supprimer mes données</em>. Par e-mail : voir ci-dessous.</li>
+      <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré et lisible par machine.</li>
+      <li><strong>Droit d'opposition</strong> : vous opposer à un traitement fondé sur notre intérêt légitime.</li>
+      <li><strong>Droit à la limitation</strong> : demander la suspension du traitement de vos données dans certains cas.</li>
+      <li><strong>Droit de retrait du consentement</strong> : révoquer à tout moment un consentement donné (GPS, HealthKit, Strava) sans que cela affecte la licéité du traitement antérieur.</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous à : <a href="mailto:vincenttartetardif@gmail.com">vincenttartetardif@gmail.com</a>. Nous répondrons sous 30 jours. Vous avez également le droit d'introduire une réclamation auprès de votre autorité de protection des données nationale (en France : la CNIL — <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
+
+    <h3>Suppression de compte</h3>
+    <p>Vous pouvez supprimer votre compte et toutes vos données cloud à tout moment depuis l'Application (<em>Réglages → Compte → Supprimer mes données</em>) ou en nous contactant par e-mail. La suppression est effective sous 72 heures pour les données Firestore. Les sauvegardes Firebase peuvent persister jusqu'à 30 jours supplémentaires avant suppression définitive.</p>
+  </section>
+
+  <!-- 9. RÉTENTION -->
+  <section id="retention">
+    <h2>9. Durée de conservation</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Type de donnée</th>
+          <th>Durée de conservation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Profil joueur (Firestore)</td>
+          <td>Jusqu'à suppression du compte, puis 30 jours maximum</td>
+        </tr>
+        <tr>
+          <td>Journal (local uniquement)</td>
+          <td>Jusqu'à désinstallation de l'Application</td>
+        </tr>
+        <tr>
+          <td>Données GPS de course</td>
+          <td>Résultats agrégés conservés dans le profil ; coordonnées brutes non stockées</td>
+        </tr>
+        <tr>
+          <td>Tokens Strava</td>
+          <td>Jusqu'à déconnexion Strava ou suppression du compte</td>
+        </tr>
+        <tr>
+          <td>Journaux d'erreurs anonymisés</td>
+          <td>90 jours maximum</td>
+        </tr>
+        <tr>
+          <td>Compte Firebase anonyme</td>
+          <td>Supprimé sur demande ou après 6 mois d'inactivité</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 10. MODIFICATIONS -->
+  <section id="modifications">
+    <h2>10. Modifications de cette politique</h2>
+    <p>Nous pouvons mettre à jour cette politique de confidentialité pour refléter des évolutions de l'Application ou des obligations légales. En cas de modification substantielle, nous vous en informerons via une notification dans l'Application ou par e-mail (si vous avez lié un compte). La date de « dernière mise à jour » en haut de cette page est toujours à jour.</p>
+    <p>L'utilisation continue de l'Application après notification d'une modification vaut acceptation de la nouvelle politique.</p>
+  </section>
+
+  <!-- 11. CONTACT -->
+  <section id="contact">
+    <h2>11. Contact</h2>
+    <p>Pour toute question relative à cette politique de confidentialité ou à vos données personnelles :</p>
+    <p>
+      <strong>Vincent Tardif</strong><br />
+      Développeur — Forge &amp; Quêtes<br />
+      E-mail : <a href="mailto:vincenttartetardif@gmail.com">vincenttartetardif@gmail.com</a>
+    </p>
+    <p>Nous nous engageons à répondre à toute demande dans un délai de 30 jours calendaires.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Vincent Tardif — Forge &amp; Quêtes &nbsp;·&nbsp; <a href="mailto:vincenttartetardif@gmail.com">vincenttartetardif@gmail.com</a></p>
+  <p style="margin-top:6px;">Politique de confidentialité applicable à l'Application mobile iOS &amp; Android (com.forgeetquetes.app)</p>
+</footer>
+
+</body>
+</html>

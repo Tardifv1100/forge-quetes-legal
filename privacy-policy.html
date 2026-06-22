@@ -201,7 +201,7 @@
 <header>
   <div class="logo">Forge &amp; Quêtes</div>
   <h1>Politique de confidentialité</h1>
-  <div class="subtitle">Dernière mise à jour : 1er juin 2026 &nbsp;·&nbsp; Version 1.0</div>
+  <div class="subtitle">Dernière mise à jour : 22 juin 2026 &nbsp;·&nbsp; Version 1.1</div>
 </header>
 
 <main>
@@ -247,7 +247,7 @@
       <li><strong>Profil de joueur</strong> : nom d'affichage, titre choisi, statistiques de jeu (Force, Intelligence, Sagesse, Persévérance, Endurance, Dextérité), niveau, points d'expérience, pièces, streak.</li>
       <li><strong>Quêtes et habitudes</strong> : quêtes journalières, quêtes d'âme, quêtes spéciales, habitudes personnalisées, pactes quotidiens.</li>
       <li><strong>Journal</strong> : entrées texte que vous rédigez librement, émotions associées, runes optionnelles. <em>Note : le journal n'est pas synchronisé sur nos serveurs, il reste uniquement sur votre appareil.</em></li>
-      <li><strong>Bibliothèque</strong> : titres de livres que vous importez ou renseignez.</li>
+      <li><strong>Bibliothèque</strong> : titres de livres et progression de lecture. Le fichier du livre lui-même (EPUB/PDF) reste stocké uniquement sur votre appareil — il n'est jamais téléversé sur nos serveurs.</li>
       <li><strong>Méditation</strong> : historique de vos séances (date, durée, type de pratique), pas de contenu audio personnel.</li>
       <li><strong>Musculation et courses</strong> : données de séances d'entraînement que vous enregistrez manuellement ou importez.</li>
     </ul>
@@ -261,25 +261,34 @@
     </ul>
 
     <h3>2.3 Données de santé et d'activité (HealthKit)</h3>
-    <p><span class="badge badge-ios">iOS uniquement</span> Avec votre autorisation explicite, l'Application peut lire les données suivantes depuis l'app Santé d'Apple :</p>
+    <p><span class="badge badge-ios">iOS uniquement</span> Avec votre autorisation explicite, l'Application peut <strong>lire</strong> (jamais écrire) les données suivantes depuis l'app Santé d'Apple :</p>
     <ul>
-      <li>Courses à pied, marche, randonnée (distance, durée, calories)</li>
+      <li>Courses à pied, marche, randonnée, distance, calories actives (séances et tendances)</li>
       <li>Séances d'entraînement (musculation, HIIT, yoga, etc.)</li>
+      <li>Fréquence cardiaque pendant l'effort et fréquence cardiaque au repos</li>
+      <li>VO2 max, poids et nombre de pas quotidien (« vitaux » affichés dans votre profil)</li>
     </ul>
-    <p>Ces données sont importées dans votre profil de joueur pour alimenter vos statistiques. Elles ne sont <strong>pas partagées avec des tiers</strong>. L'accès en écriture dans Santé est limité à l'enregistrement de vos séances d'entraînement de musculation si vous choisissez de l'activer.</p>
-    <p>Vous pouvez révoquer ces autorisations à tout moment dans <em>Réglages → Confidentialité &amp; Sécurité → Santé → Forge &amp; Quêtes</em>.</p>
+    <p>L'Application ne demande <strong>aucune permission d'écriture</strong> dans Santé : aucune donnée n'est renvoyée vers l'app Santé d'Apple. Les valeurs lues (incluant les vitaux ci-dessus) sont importées dans votre profil de joueur pour alimenter vos statistiques et sont synchronisées avec votre sauvegarde cloud (Firestore) au même titre que le reste du profil — voir <a href="#stockage">section 4</a>. Elles ne sont <strong>jamais partagées avec des tiers</strong> ni utilisées à des fins publicitaires.</p>
+    <p>Vous pouvez révoquer ces autorisations à tout moment dans <em>Réglages → Confidentialité &amp; Sécurité → Santé → Forge &amp; Quêtes</em> sur votre appareil iOS.</p>
 
     <h3>2.4 Identifiant anonyme (Firebase)</h3>
     <p>L'Application crée automatiquement un compte anonyme via Firebase Authentication. Cet identifiant ne contient <strong>aucune information personnelle identifiable</strong> (ni nom, ni e-mail, ni numéro de téléphone). Il sert uniquement à associer vos données de progression à un compte cloud pour la sauvegarde et la synchronisation.</p>
     <p>Si vous choisissez de lier votre compte à une adresse e-mail (dans les Réglages), celle-ci est stockée par Firebase pour permettre la récupération de compte. Aucun mot de passe n'est visible pour nous.</p>
 
-    <h3>2.5 Code ami et fonctions sociales</h3>
-    <p>L'Application génère un code ami unique (chaîne alphanumérique aléatoire) associé à votre identifiant anonyme. Ce code peut être partagé avec d'autres utilisateurs pour créer des liens d'amitié ou rejoindre une guilde. Les données partagées dans ce cadre sont limitées à : nom d'affichage, titre actif, statistiques visibles selon vos préférences de confidentialité.</p>
+    <h3>2.5 Code ami, guilde et classement mondial</h3>
+    <p>L'Application génère un code ami unique (chaîne alphanumérique aléatoire) associé à votre identifiant anonyme. Ce code peut être partagé avec d'autres utilisateurs pour créer des liens d'amitié ou rejoindre une guilde. Les données partagées dans ce cadre sont limitées à : nom d'affichage, titre actif, statistiques, actions et streak — chacun de ces éléments pouvant être masqué individuellement dans <em>Réglages → Confidentialité</em>.</p>
+    <div class="highlight">
+      <strong>Classement mondial — visible par défaut :</strong> votre nom d'affichage, niveau, XP, streak, titre actif et code ami apparaissent par défaut dans un classement mondial consultable par l'ensemble des utilisateurs de l'Application (option <code>classementOptIn</code>, activée par défaut). Vous pouvez vous retirer de ce classement à tout moment dans <em>Réglages → Confidentialité → Classement</em> ; votre code ami n'apparaît alors plus dans aucune liste publique.
+    </div>
 
-    <h3>2.6 Intégration Strava (optionnelle)</h3>
+    <h3>2.6 Achats et abonnements (RevenueCat)</h3>
+    <p>Les achats et futurs abonnements in-app sont traités via <strong>RevenueCat</strong>, un service tiers qui s'intercale entre l'Application et l'App Store / Google Play pour valider et synchroniser vos achats. Lors de l'initialisation, l'Application transmet à RevenueCat votre identifiant Firebase anonyme (en tant qu'<em>appUserID</em>) afin d'associer vos achats à votre profil sur tous vos appareils.</p>
+    <p>RevenueCat reçoit et traite : votre identifiant anonyme, l'historique de vos transactions in-app (produits achetés, dates, statut d'abonnement), et des identifiants techniques d'appareil transmis par Apple/Google lors de l'achat. RevenueCat n'a accès à <strong>aucune</strong> autre donnée de votre profil de jeu (stats, journal, habitudes, etc.). Aucune donnée de carte bancaire ne transite par l'Application ni par RevenueCat — les paiements sont traités exclusivement par Apple ou Google.</p>
+
+    <h3>2.7 Intégration Strava (optionnelle)</h3>
     <p>Si vous connectez votre compte Strava, l'Application accède via OAuth 2.0 à votre historique de courses Strava. Un jeton d'accès et de rafraîchissement est stocké localement sur votre appareil et synchronisé dans votre profil chiffré. Vous pouvez déconnecter Strava à tout moment depuis l'Application.</p>
 
-    <h3>2.7 Données techniques (collectées automatiquement)</h3>
+    <h3>2.8 Données techniques (collectées automatiquement)</h3>
     <table>
       <thead>
         <tr>
@@ -305,6 +314,11 @@
           <td>Local + Firestore chiffré</td>
         </tr>
         <tr>
+          <td>Identifiant anonyme transmis à RevenueCat (appUserID)</td>
+          <td>Validation et synchronisation des achats</td>
+          <td>Serveurs RevenueCat</td>
+        </tr>
+        <tr>
           <td>Préférences de l'app</td>
           <td>Paramètres utilisateur</td>
           <td>Local (AsyncStorage)</td>
@@ -312,16 +326,16 @@
       </tbody>
     </table>
 
-    <h3>2.8 Données non collectées</h3>
+    <h3>2.9 Données non collectées</h3>
     <p>L'Application <strong>ne collecte pas</strong> :</p>
     <ul>
       <li>Nom réel, adresse postale, numéro de téléphone (sauf e-mail optionnel pour liaison de compte)</li>
-      <li>Données financières ou de paiement (les achats in-app passent par Apple App Store)</li>
+      <li>Numéro de carte bancaire ou autre donnée de paiement (les transactions sont traitées exclusivement par Apple/Google, voir section 2.6)</li>
       <li>Photos, contacts, calendrier, microphone</li>
-      <li>Données biométriques (fréquence cardiaque, etc.) — même si disponibles dans HealthKit, elles ne sont pas lues</li>
       <li>Historique de navigation web</li>
-      <li>Publicités, cookies de tracking tiers</li>
+      <li>Publicités, cookies de tracking tiers, identifiants publicitaires (IDFA)</li>
     </ul>
+    <p>Les données de santé lues via HealthKit (incluant la fréquence cardiaque) <strong>sont</strong> collectées avec votre consentement explicite — voir <a href="#donnees">section 2.3</a>, qui détaille précisément leur usage.</p>
   </section>
 
   <!-- 3. FINALITÉS -->
@@ -354,7 +368,7 @@
         <tr>
           <td>Import de données de santé (HealthKit)</td>
           <td>Consentement explicite</td>
-          <td>Courses, séances (Apple Santé)</td>
+          <td>Courses, séances, fréquence cardiaque, VO2 max, poids, pas</td>
         </tr>
         <tr>
           <td>Import de courses Strava</td>
@@ -362,9 +376,19 @@
           <td>Historique Strava, tokens OAuth</td>
         </tr>
         <tr>
+          <td>Traitement des achats in-app (RevenueCat)</td>
+          <td>Exécution du contrat</td>
+          <td>Identifiant anonyme, historique de transactions</td>
+        </tr>
+        <tr>
           <td>Fonctions sociales (amis, guilde)</td>
           <td>Consentement (activation volontaire)</td>
           <td>Code ami, nom, titre, stats visibles</td>
+        </tr>
+        <tr>
+          <td>Classement mondial</td>
+          <td>Consentement (opt-out disponible)</td>
+          <td>Nom, niveau, XP, streak, titre, code ami</td>
         </tr>
         <tr>
           <td>Notifications locales (rappels, streak)</td>
@@ -388,7 +412,7 @@
     <p>La majorité de vos données (profil joueur, journal, préférences) est d'abord stockée localement sur votre appareil via le mécanisme AsyncStorage. Ces données sont protégées par les mécanismes de sécurité propres à iOS (sandboxing, chiffrement du stockage activé par le système) et Android.</p>
 
     <h3>4.2 Stockage cloud (Firebase / Firestore)</h3>
-    <p>Votre profil de joueur (hors journal) est synchronisé sur Firebase Firestore (Google Cloud). Les données sont transmises via HTTPS (TLS 1.2+) et stockées dans des infrastructures Google conformes aux certifications ISO 27001, SOC 2 et SOC 3. Firebase est un service de Google LLC, soumis au DPA de Google Cloud et au Privacy Shield lorsqu'applicable.</p>
+    <p>Votre profil de joueur (hors journal) est synchronisé sur Firebase Firestore (Google Cloud), y compris les vitaux HealthKit, les tokens Strava et les données de jeu. Les données sont transmises via HTTPS (TLS 1.2+) et stockées dans des infrastructures Google conformes aux certifications ISO 27001, SOC 2 et SOC 3. Firebase est un service de Google LLC ; les transferts de données hors UE s'appuient sur les clauses contractuelles types de la Commission européenne et, pour les transferts vers les États-Unis, sur le cadre <em>EU-US Data Privacy Framework</em> lorsqu'applicable.</p>
     <p>Votre journal n'est <strong>jamais</strong> synchronisé sur le cloud — il reste exclusivement sur votre appareil.</p>
 
     <h3>4.3 Mesures de sécurité</h3>
@@ -409,8 +433,9 @@
     </div>
     <p>Les seules situations où des données peuvent être partagées :</p>
     <ul>
-      <li><strong>Avec d'autres utilisateurs (fonctions sociales)</strong> : uniquement les données que vous choisissez de partager (nom, titre, statistiques selon votre niveau de confidentialité paramétré), et uniquement si vous activez les fonctions sociales.</li>
+      <li><strong>Avec d'autres utilisateurs (fonctions sociales et classement mondial)</strong> : les données que vous choisissez de partager (nom, titre, statistiques) selon votre niveau de confidentialité paramétré, ainsi que — par défaut, sauf désactivation de votre part — votre entrée dans le classement mondial (nom, niveau, XP, streak, titre, code ami).</li>
       <li><strong>Avec Google / Firebase</strong> : en tant que sous-traitant technique pour la sauvegarde cloud. Google ne peut pas utiliser ces données à des fins publicitaires dans ce cadre.</li>
+      <li><strong>Avec RevenueCat</strong> : en tant que sous-traitant technique pour la validation des achats in-app. RevenueCat reçoit votre identifiant anonyme et votre historique de transactions — voir <a href="#donnees">section 2.6</a>.</li>
       <li><strong>Avec Apple</strong> : les données de santé restent sous le contrôle d'Apple HealthKit. Nous ne les réexportons pas vers des tiers.</li>
       <li><strong>Avec Strava</strong> : uniquement dans le sens Strava → Application (import de vos propres courses). Nous ne publions rien sur Strava en votre nom.</li>
       <li><strong>Obligation légale</strong> : si la loi applicable nous y contraint (requête judiciaire, injonction), nous vous en informerons dans les limites de ce que la loi autorise.</li>
@@ -467,9 +492,15 @@
           <td>Synthèse locale, aucune donnée envoyée</td>
         </tr>
         <tr>
-          <td>Apple App Store (achats in-app)</td>
-          <td>Apple Inc.</td>
-          <td>Achats (si activés)</td>
+          <td>RevenueCat</td>
+          <td>RevenueCat Inc.</td>
+          <td>Validation et synchronisation des achats in-app</td>
+          <td><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Apple App Store / Google Play (paiement)</td>
+          <td>Apple Inc. / Google LLC</td>
+          <td>Traitement effectif des transactions</td>
           <td><a href="https://www.apple.com/fr/privacy/" target="_blank" rel="noopener">apple.com/fr/privacy</a></td>
         </tr>
       </tbody>
@@ -490,7 +521,7 @@
     <ul>
       <li><strong>Droit d'accès</strong> : obtenir une copie des données que nous détenons sur vous.</li>
       <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes.</li>
-      <li><strong>Droit à l'effacement</strong> (« droit à l'oubli ») : demander la suppression de vos données. Dans l'Application : <em>Réglages → Compte → Supprimer mes données</em>. Par e-mail : voir ci-dessous.</li>
+      <li><strong>Droit à l'effacement</strong> (« droit à l'oubli ») : demander la suppression de vos données à tout moment en nous écrivant à l'adresse de contact ci-dessous, en précisant votre code ami ou l'adresse e-mail liée à votre compte si vous en avez créé un.</li>
       <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré et lisible par machine.</li>
       <li><strong>Droit d'opposition</strong> : vous opposer à un traitement fondé sur notre intérêt légitime.</li>
       <li><strong>Droit à la limitation</strong> : demander la suspension du traitement de vos données dans certains cas.</li>
@@ -499,7 +530,7 @@
     <p>Pour exercer ces droits, contactez-nous à : <a href="mailto:vincenttartetardif@gmail.com">vincenttartetardif@gmail.com</a>. Nous répondrons sous 30 jours. Vous avez également le droit d'introduire une réclamation auprès de votre autorité de protection des données nationale (en France : la CNIL — <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
 
     <h3>Suppression de compte</h3>
-    <p>Vous pouvez supprimer votre compte et toutes vos données cloud à tout moment depuis l'Application (<em>Réglages → Compte → Supprimer mes données</em>) ou en nous contactant par e-mail. La suppression est effective sous 72 heures pour les données Firestore. Les sauvegardes Firebase peuvent persister jusqu'à 30 jours supplémentaires avant suppression définitive.</p>
+    <p>Vous pouvez demander la suppression de votre compte et de toutes vos données cloud à tout moment en nous contactant par e-mail à l'adresse ci-dessous. Nous traitons chaque demande manuellement et confirmons la suppression définitive de votre document Firestore et de votre compte d'authentification anonyme sous 72 heures. Les sauvegardes techniques de Firebase peuvent persister jusqu'à 30 jours supplémentaires avant suppression définitive.</p>
   </section>
 
   <!-- 9. RÉTENTION -->
@@ -528,6 +559,14 @@
         <tr>
           <td>Tokens Strava</td>
           <td>Jusqu'à déconnexion Strava ou suppression du compte</td>
+        </tr>
+        <tr>
+          <td>Vitaux HealthKit (fréquence cardiaque, VO2 max, poids, pas)</td>
+          <td>Jusqu'à révocation des permissions Santé ou suppression du compte</td>
+        </tr>
+        <tr>
+          <td>Identifiant et historique de transactions RevenueCat</td>
+          <td>Conformément à la politique de rétention de RevenueCat ; déconnecté de votre profil sur demande de suppression de compte</td>
         </tr>
         <tr>
           <td>Journaux d'erreurs anonymisés</td>

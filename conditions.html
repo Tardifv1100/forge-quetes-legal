@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conditions d’utilisation — Forge &amp; Quêtes</title>
+  <style>
+    :root {
+      --bg: #141414;
+      --surface: #1e1e1e;
+      --orange: #ff8c42;
+      --purple: #a060ff;
+      --parchment: #c4b49a;
+      --text: #e0d8cc;
+      --muted: #888;
+      --border: #2e2e2e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    header .subtitle {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--purple);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .toc h2 {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin: 4px 0;
+    }
+
+    .toc a {
+      color: var(--parchment);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover { color: #fff; }
+
+    section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--parchment);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .badge-ios { background: #1c3a5e; color: #60b0ff; }
+    .badge-android { background: #1a3a1a; color: #60e060; }
+    .badge-both { background: #2a2a1a; color: var(--orange); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: #222;
+      color: var(--parchment);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #191919; }
+
+    .highlight {
+      background: #1a1a2e;
+      border-left: 3px solid var(--purple);
+      border-radius: 4px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--parchment);
+    }
+
+    .highlight strong { color: #fff; }
+
+    a { color: var(--orange); }
+    a:hover { color: #ffad72; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Forge &amp; Quêtes</div>
+  <h1>Conditions d’utilisation</h1>
+  <div class="subtitle">Dernière mise à jour : 24 septembre 2026 &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; <a href="#en">English below</a></div>
+</header>
+
+<main>
+  <div class="toc">
+    <h2>Sommaire</h2>
+    <ol>
+      <li><a href="#acceptation">Acceptation</a></li>
+      <li><a href="#service">Le service</a></li>
+      <li><a href="#compte">Compte et suppression</a></li>
+      <li><a href="#conduite">Règles de conduite — tolérance zéro</a></li>
+      <li><a href="#moderation">Signalement, blocage et modération</a></li>
+      <li><a href="#abonnement">Abonnement Forge Éternelle et achats</a></li>
+      <li><a href="#sante">Santé et activité physique</a></li>
+      <li><a href="#propriete">Propriété intellectuelle</a></li>
+      <li><a href="#responsabilite">Responsabilité</a></li>
+      <li><a href="#modifications">Modifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <section id="acceptation">
+    <h2>1. Acceptation</h2>
+    <p>Forge &amp; Quêtes (« l’Application ») est éditée à titre individuel par Vincent Tardif. En utilisant l’Application, tu acceptes les présentes conditions ainsi que la <a href="privacy-policy.html">politique de confidentialité</a>. Sur iOS, le <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">contrat de licence standard d’Apple (EULA)</a> s’applique également ; en cas de contradiction, les présentes conditions précisent ce contrat sans le restreindre.</p>
+  </section>
+
+  <section id="service">
+    <h2>2. Le service</h2>
+    <p>L’Application est un jeu de rôle de développement personnel : tes actions réelles (sport, lecture, méditation, habitudes) font progresser un personnage. Le cœur du jeu est gratuit. Certaines fonctions sont sociales (alliés, guildes, pactes, classement) et te mettent en contact avec d’autres joueurs.</p>
+  </section>
+
+  <section id="compte">
+    <h2>3. Compte et suppression</h2>
+    <p>Un compte anonyme est créé automatiquement pour sauvegarder ta progression. Tu peux le lier à une adresse courriel pour le restaurer sur un autre appareil. Tu peux supprimer ton compte et toutes tes données cloud à tout moment depuis <strong>Réglages → Compte → Supprimer mon compte</strong>. Cette suppression est définitive.</p>
+  </section>
+
+  <section id="conduite">
+    <h2>4. Règles de conduite — tolérance zéro</h2>
+    <p>Tout ce que d’autres joueurs peuvent voir (nom de forgeron, nom et description de guilde, nom de pacte, activités partagées) doit rester respectueux. Il est strictement interdit de publier ou d’utiliser :</p>
+    <ul>
+      <li>des contenus haineux, racistes, sexistes, homophobes ou discriminatoires ;</li>
+      <li>du harcèlement, des menaces, de l’intimidation ou du spam ;</li>
+      <li>des contenus sexuels, pornographiques ou violents ;</li>
+      <li>l’usurpation de l’identité d’une autre personne ;</li>
+      <li>toute tentative de tricherie ou d’atteinte au service (exploitation de failles, automatisation).</li>
+    </ul>
+    <p><strong>Aucune tolérance n’est accordée</strong> à ces comportements : le contenu est retiré et le compte fautif peut être renommé, exclu des fonctions sociales ou supprimé, sans préavis.</p>
+  </section>
+
+  <section id="moderation">
+    <h2>5. Signalement, blocage et modération</h2>
+    <p>Tu peux <strong>signaler</strong> ou <strong>bloquer</strong> n’importe quel joueur depuis ta liste d’alliés, ta guilde ou le classement. Un joueur bloqué disparaît de tes alliés, du classement et de ton fil, et ses invitations ne t’atteignent plus ; tu peux le débloquer dans Confidentialité. Chaque signalement est examiné <strong>sous 24 heures</strong>. Tu peux aussi écrire à <a href="mailto:contact@forgequests.com">contact@forgequests.com</a>.</p>
+  </section>
+
+  <section id="abonnement">
+    <h2>6. Abonnement Forge Éternelle et achats</h2>
+    <ul>
+      <li>L’abonnement Forge Éternelle est proposé au mois ou à l’année. Le prix affiché dans l’Application est celui de ton store, taxes comprises.</li>
+      <li>Le paiement est débité sur ton compte App Store ou Google Play à la confirmation de l’achat.</li>
+      <li>L’abonnement se <strong>renouvelle automatiquement</strong> au même prix et pour la même durée, sauf résiliation au moins 24 heures avant la fin de la période en cours.</li>
+      <li>Tu gères et résilies ton abonnement dans les réglages de ton compte App Store ou Google Play. Supprimer l’Application ou ton compte ne résilie pas l’abonnement.</li>
+      <li>Si un essai gratuit est proposé, toute partie non utilisée est perdue à l’achat d’un abonnement.</li>
+      <li>Les remboursements relèvent d’Apple ou de Google, selon leurs politiques.</li>
+    </ul>
+    <p>L’or et les objets du jeu n’ont aucune valeur monétaire et ne sont ni échangeables ni remboursables.</p>
+  </section>
+
+  <section id="sante">
+    <h2>7. Santé et activité physique</h2>
+    <p>L’Application est un outil de motivation, pas un dispositif médical. Elle ne fournit aucun avis médical. Consulte un professionnel de santé avant de commencer un programme d’entraînement ou de méditation si tu as le moindre doute sur ta condition. Tu pratiques les activités proposées sous ta propre responsabilité.</p>
+  </section>
+
+  <section id="propriete">
+    <h2>8. Propriété intellectuelle</h2>
+    <p>L’Application, ses textes, illustrations, voix et sons appartiennent à leur auteur. Tu conserves les droits sur ce que tu écris (journal, noms), et tu accordes à l’Application le droit de l’afficher aux autres joueurs quand tu choisis de le partager. Les livres que tu importes restent sur ton appareil et relèvent de ta responsabilité.</p>
+  </section>
+
+  <section id="responsabilite">
+    <h2>9. Responsabilité</h2>
+    <p>L’Application est fournie « en l’état ». Nous faisons de notre mieux pour qu’elle fonctionne et que ta progression soit préservée, sans pouvoir garantir l’absence d’interruption ou de perte de données. Dans les limites permises par la loi, notre responsabilité est limitée au montant que tu as payé pour l’Application au cours des douze derniers mois.</p>
+  </section>
+
+  <section id="modifications">
+    <h2>10. Modifications</h2>
+    <p>Ces conditions peuvent évoluer avec l’Application. La date en haut de la page indique la dernière version. En cas de changement important, tu en seras informé dans l’Application.</p>
+  </section>
+
+  <section id="contact">
+    <h2>11. Contact</h2>
+    <p>Vincent Tardif — Forge &amp; Quêtes<br />Courriel : <a href="mailto:contact@forgequests.com">contact@forgequests.com</a></p>
+  </section>
+
+  <section id="en">
+    <h2>Terms of Use (English)</h2>
+    <p><strong>Acceptance.</strong> By using Forge &amp; Quêtes you agree to these terms and to the <a href="privacy-policy.html">privacy policy</a>. On iOS, <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple’s standard license agreement (EULA)</a> also applies.</p>
+    <p><strong>Account.</strong> An anonymous account is created to save your progress. You can link it to an email and delete it at any time in <strong>Settings → Account → Delete my account</strong>. Deletion is permanent.</p>
+    <p><strong>Zero tolerance.</strong> Anything other players can see (name, guild name and description, pact names, shared activity) must stay respectful. Hateful, discriminatory, harassing, threatening, sexual or violent content, impersonation, spam and cheating are strictly forbidden. Offending content is removed and the account may be renamed, excluded from social features or deleted without notice.</p>
+    <p><strong>Report and block.</strong> You can report or block any player from your allies, your guild or the leaderboard. Blocked players disappear from your allies, the leaderboard and your feed, and their invitations no longer reach you. Every report is reviewed within 24 hours. Contact: <a href="mailto:contact@forgequests.com">contact@forgequests.com</a>.</p>
+    <p><strong>Forge Éternelle subscription.</strong> Monthly or yearly. Payment is charged to your App Store or Google Play account at confirmation of purchase. The subscription <strong>renews automatically</strong> at the same price and period unless cancelled at least 24 hours before the end of the current period. Manage or cancel it in your store account settings; deleting the app or your account does not cancel it. Any unused portion of a free trial is forfeited when you purchase a subscription. Refunds are handled by Apple or Google. In-game gold and items have no monetary value.</p>
+    <p><strong>Health.</strong> The app is a motivation tool, not a medical device, and gives no medical advice. Consult a health professional before starting any training or meditation program if in doubt.</p>
+    <p><strong>Liability.</strong> The app is provided “as is”. To the extent permitted by law, liability is limited to the amount you paid for the app in the last twelve months.</p>
+  </section>
+</main>
+
+<footer>
+  © 2026 Vincent Tardif — Forge &amp; Quêtes &nbsp;·&nbsp; <a href="mailto:contact@forgequests.com">contact@forgequests.com</a> &nbsp;·&nbsp; <a href="privacy-policy.html">Politique de confidentialité</a>
+</footer>
+
+</body>
+</html>
